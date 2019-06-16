@@ -11,9 +11,9 @@ namespace WeekendTaskMVC.Controllers
     {
         public ActionResult Index()
         {
-            HomeViewModel model = new HomeViewModel();
-            model.Slider = db.Sliders.ToList();
-            return View(model);
+           HomeViewModel models = new HomeViewModel();
+            models.Slider = db.Sliders.ToList();
+            return View(models);
         }
         public ActionResult Home1()
         {

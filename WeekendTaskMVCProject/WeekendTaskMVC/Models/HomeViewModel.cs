@@ -8,7 +8,5 @@ namespace WeekendTaskMVC.Models
     public class HomeViewModel
     {
         public List<Slider> Slider { get; set; }
-
-
     }
 }

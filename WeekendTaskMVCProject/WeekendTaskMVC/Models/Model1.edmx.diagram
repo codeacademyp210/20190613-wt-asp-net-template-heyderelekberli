@@ -4,7 +4,7 @@
   <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
     <!-- Diagram content (shape and connector positions) -->
     <edmx:Diagrams>
-      <Diagram DiagramId="6f703bd0f99245999d42b4faae2b6be5" Name="Diagram1">
+      <Diagram DiagramId="807d7317c9144ffa8595620f9a0d81ec" Name="Diagram1">
         <EntityTypeShape EntityType="BemaxModel.Slider" Width="1.5" PointX="0.75" PointY="0.75" IsExpanded="true" />
       </Diagram>
     </edmx:Diagrams>

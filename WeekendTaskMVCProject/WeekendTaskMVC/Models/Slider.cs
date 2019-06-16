@@ -16,5 +16,7 @@ namespace WeekendTaskMVC.Models
     {
         public int ID { get; set; }
         public string Link { get; set; }
+        public string FirstTitle { get; set; }
+        public string SecondTitle { get; set; }
     }
 }

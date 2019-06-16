@@ -11,6 +11,8 @@
           </Key>
           <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
           <Property Name="Link" Type="nvarchar" MaxLength="250" Nullable="false" />
+          <Property Name="FirstTitle" Type="nvarchar" MaxLength="250" />
+          <Property Name="SecondTitle" Type="nvarchar" MaxLength="250" />
         </EntityType>
         <EntityContainer Name="BemaxModelStoreContainer">
           <EntitySet Name="Slider" EntityType="Self.Slider" Schema="dbo" store:Type="Tables" />
@@ -26,6 +28,8 @@
           </Key>
           <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
           <Property Name="Link" Type="String" MaxLength="250" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="FirstTitle" Type="String" MaxLength="250" FixedLength="false" Unicode="true" />
+          <Property Name="SecondTitle" Type="String" MaxLength="250" FixedLength="false" Unicode="true" />
         </EntityType>
         <EntityContainer Name="BemaxEntities" annotation:LazyLoadingEnabled="true">
           <EntitySet Name="Sliders" EntityType="Self.Slider" />
@@ -41,6 +45,8 @@
               <MappingFragment StoreEntitySet="Slider">
                 <ScalarProperty Name="ID" ColumnName="ID" />
                 <ScalarProperty Name="Link" ColumnName="Link" />
+                <ScalarProperty Name="FirstTitle" ColumnName="FirstTitle" />
+                <ScalarProperty Name="SecondTitle" ColumnName="SecondTitle" />
               </MappingFragment>
             </EntityTypeMapping>
           </EntitySetMapping>
