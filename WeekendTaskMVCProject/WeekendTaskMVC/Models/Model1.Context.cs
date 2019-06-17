@@ -26,5 +26,12 @@ namespace WeekendTaskMVC.Models
         }
     
         public virtual DbSet<Slider> Sliders { get; set; }
+        public virtual DbSet<Advisor> Advisors { get; set; }
+        public virtual DbSet<OurWork> OurWorks { get; set; }
+        public virtual DbSet<Project> Projects { get; set; }
+        public virtual DbSet<Choos> Chooses { get; set; }
+        public virtual DbSet<Post> Posts { get; set; }
+        public virtual DbSet<Tester> Testers { get; set; }
+        public virtual DbSet<Partner> Partners { get; set; }
     }
 }

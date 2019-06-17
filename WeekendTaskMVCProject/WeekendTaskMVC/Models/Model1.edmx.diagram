@@ -6,6 +6,13 @@
     <edmx:Diagrams>
       <Diagram DiagramId="807d7317c9144ffa8595620f9a0d81ec" Name="Diagram1">
         <EntityTypeShape EntityType="BemaxModel.Slider" Width="1.5" PointX="0.75" PointY="0.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="BemaxModel.Advisor" Width="1.5" PointX="3.375" PointY="0.75" />
+        <EntityTypeShape EntityType="BemaxModel.OurWork" Width="1.5" PointX="0.75" PointY="3.75" />
+        <EntityTypeShape EntityType="BemaxModel.Project" Width="1.5" PointX="3.375" PointY="3.75" />
+        <EntityTypeShape EntityType="BemaxModel.Choos" Width="1.5" PointX="5.375" PointY="0.75" />
+        <EntityTypeShape EntityType="BemaxModel.Post" Width="1.5" PointX="5.375" PointY="3.75" />
+        <EntityTypeShape EntityType="BemaxModel.Tester" Width="1.5" PointX="0.75" PointY="6.75" />
+        <EntityTypeShape EntityType="BemaxModel.Partner" Width="1.5" PointX="7.375" PointY="0.75" />
       </Diagram>
     </edmx:Diagrams>
   </edmx:Designer>

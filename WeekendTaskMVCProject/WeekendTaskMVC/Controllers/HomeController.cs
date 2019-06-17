@@ -13,11 +13,28 @@ namespace WeekendTaskMVC.Controllers
         {
            HomeViewModel models = new HomeViewModel();
             models.Slider = db.Sliders.ToList();
+            models.Advisor = db.Advisors.ToList();
+            models.OurWork= db.OurWorks.ToList();
+            models.Project= db.Projects.ToList();
+            models.Choose= db.Chooses.ToList();
+            models.Post= db.Posts.ToList();
+            models.Tester= db.Testers.ToList();
+            models.Partner= db.Partners.ToList();
             return View(models);
         }
         public ActionResult Home1()
         {
-            return View();
+            HomeViewModel models = new HomeViewModel();
+            models.Slider = db.Sliders.ToList();
+            models.Advisor = db.Advisors.ToList();
+            models.OurWork = db.OurWorks.ToList();
+            models.Project = db.Projects.ToList();
+            models.Choose = db.Chooses.ToList();
+            models.Post = db.Posts.ToList();
+            models.Tester = db.Testers.ToList();
+            models.Partner = db.Partners.ToList();
+            return View(models);
+         
         }
         public ActionResult Home2()
         {

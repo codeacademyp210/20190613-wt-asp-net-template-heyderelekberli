@@ -135,6 +135,12 @@
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
+    <Compile Include="Models\Advisor.cs">
+      <DependentUpon>Model1.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\Choos.cs">
+      <DependentUpon>Model1.tt</DependentUpon>
+    </Compile>
     <Compile Include="Models\HomeViewModel.cs" />
     <Compile Include="Models\Model1.Context.cs">
       <AutoGen>True</AutoGen>
@@ -151,7 +157,22 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>Model1.edmx</DependentUpon>
     </Compile>
+    <Compile Include="Models\OurWork.cs">
+      <DependentUpon>Model1.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\Partner.cs">
+      <DependentUpon>Model1.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\Post.cs">
+      <DependentUpon>Model1.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\Project.cs">
+      <DependentUpon>Model1.tt</DependentUpon>
+    </Compile>
     <Compile Include="Models\Slider.cs">
+      <DependentUpon>Model1.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\Tester.cs">
       <DependentUpon>Model1.tt</DependentUpon>
     </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -256,12 +277,12 @@
     <Content Include="Public\images\icon\map.png" />
     <Content Include="Public\images\icon\service-map.png" />
     <Content Include="Public\images\mac-book.jpg" />
-    <Content Include="Public\images\partner_01.png" />
-    <Content Include="Public\images\partner_02.png" />
-    <Content Include="Public\images\partner_03.png" />
-    <Content Include="Public\images\partner_04.png" />
-    <Content Include="Public\images\partner_05.png" />
-    <Content Include="Public\images\partner_06.png" />
+    <Content Include="Public\images\01.png" />
+    <Content Include="Public\images\02.png" />
+    <Content Include="Public\images\03.png" />
+    <Content Include="Public\images\04.png" />
+    <Content Include="Public\images\05.png" />
+    <Content Include="Public\images\06.png" />
     <Content Include="Public\images\partner_07.png" />
     <Content Include="Public\images\partner_08.png" />
     <Content Include="Public\images\partner_09.png" />

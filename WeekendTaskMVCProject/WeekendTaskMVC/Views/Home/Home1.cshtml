@@ -1,37 +1,29 @@
-﻿
-@{
+﻿@{
     ViewBag.Title = "Home Page";
 }
+@model WeekendTaskMVC.Models.HomeViewModel
+
+
+
 <!-- #Content -->
 <!-- Slider -->
 <section>
+
     <div class="rev_slider_wrapper">
         <div class="rev_slider" id="slide-1" data-version="5.4.4">
             <ul>
-                <li data-transition="fade">
-                    <img src="~/Public/images/slide_01.jpg" alt="Work" class="rev-slidebg">
-                    <div class="tp-caption slide-heading-2" data-x="center" data-y="center" data-transform_in="y:-80px;opacity:0;s:800;e:easeInOutCubic;" data-transform_out="y:-80px;opacity:0;s:300;" data-voffset="-70" data-start="900" data-fontsize="['30','30','24', '24']">work hard</div>
-                    <div class="tp-caption slide-heading-1" data-x="center" data-y="center" data-transform_in="y:80px;opacity:0;s:800;e:easeInOutCubic;" data-transform_out="y:80px;opacity:0;s:300;" data-start="1300" data-fontsize="['72','72','52','50','46', '42']">Dream Big</div>
-                    <div class="tp-caption" data-x="center" data-y="center" data-transform_in="y:100px;opacity:0;s:800;e:easeInOutCubic;" data-transform_out="y:200px;opacity:0;s:300;" data-voffset="95" data-start="1600">
-                        <a href="#" class="slide-button">Get Started</a>
-                    </div>
-                </li>
-                <li data-transition="fade">
-                    <img src="~/Public/images/slide_02.jpg" alt="Work" class="rev-slidebg">
-                    <div class="tp-caption slide-heading-2" data-x="center" data-y="center" data-transform_in="y:-80px;opacity:0;s:800;e:easeInOutCubic;" data-transform_out="y:-80px;opacity:0;s:300;" data-voffset="-70" data-start="900" data-fontsize="['30','30','24', '24']">work hard</div>
-                    <div class="tp-caption slide-heading-1" data-x="center" data-y="center" data-transform_in="y:80px;opacity:0;s:800;e:easeInOutCubic;" data-transform_out="y:80px;opacity:0;s:300;" data-start="1300" data-fontsize="['72','72','52','50','46','42']">Dream Big</div>
-                    <div class="tp-caption" data-x="center" data-y="center" data-transform_in="y:100px;opacity:0;s:800;e:easeInOutCubic;" data-transform_out="y:200px;opacity:0;s:300;" data-voffset="95" data-start="1600">
-                        <a href="#" class="slide-button">Get Started</a>
-                    </div>
-                </li>
-                <li data-transition="fade">
-                    <img src="~/Public/images/slide_03.jpg" alt="Work" class="rev-slidebg">
-                    <div class="tp-caption slide-heading-2" data-x="center" data-y="center" data-transform_in="y:-80px;opacity:0;s:800;e:easeInOutCubic;" data-transform_out="y:-80px;opacity:0;s:300;" data-voffset="-70" data-start="900" data-fontsize="['30','30','24','24']">work hard</div>
-                    <div class="tp-caption slide-heading-1" data-x="center" data-y="center" data-transform_in="y:80px;opacity:0;s:800;e:easeInOutCubic;" data-transform_out="y:80px;opacity:0;s:300;" data-start="1300" data-fontsize="['72','72','52','50' ,'46', '42']">Dream Big</div>
-                    <div class="tp-caption" data-x="center" data-y="center" data-transform_in="y:100px;opacity:0;s:800;e:easeInOutCubic;" data-transform_out="y:200px;opacity:0;s:300;" data-voffset="95" data-start="1600">
-                        <a href="#" class="slide-button">Get Started</a>
-                    </div>
-                </li>
+                @foreach (var slide in Model.Slider)
+                {
+                    <li data-transition="fade">
+                        <img src="~/Public/images/@slide.Link" alt="Work" class="rev-slidebg">
+                        <div class="tp-caption slide-heading-2" data-x="center" data-y="center" data-transform_in="y:-80px;opacity:0;s:800;e:easeInOutCubic;" data-transform_out="y:-80px;opacity:0;s:300;" data-voffset="-70" data-start="900" data-fontsize="['30','30','24', '24']">@slide.FirstTitle</div>
+                        <div class="tp-caption slide-heading-1" data-x="center" data-y="center" data-transform_in="y:80px;opacity:0;s:800;e:easeInOutCubic;" data-transform_out="y:80px;opacity:0;s:300;" data-start="1300" data-fontsize="['72','72','52','50','46', '42']">@slide.SecondTitle</div>
+                        <div class="tp-caption" data-x="center" data-y="center" data-transform_in="y:100px;opacity:0;s:800;e:easeInOutCubic;" data-transform_out="y:200px;opacity:0;s:300;" data-voffset="95" data-start="1600">
+                            <a href="#" class="slide-button">Get Started</a>
+                        </div>
+                    </li>
+                }
+
             </ul>
         </div>
     </div>
@@ -63,76 +55,30 @@
     <div class="section-wrapper">
         <div class="container py-50">
             <div class="row justify-content-center">
-                <div class="col-lg-4 col-md-8">
-                    <div class="iconbox iconbox-style-1">
-                        <div class="iconbox-container">
-                            <div class="iconbox-image">
-                                <img src="~/Public/images/iconbox_01.jpg" alt="Image 1">
-                            </div>
-                            <div class="iconbox-content">
-                                <h4 class="iconbox-content-heading">
-                                    <i class="fa fa-bar-chart"></i>
-                                    Top Investment Advisors
-                                </h4>
-                                <div class="iconbox-content-body">
-                                    <p>
-                                        Mauris scelerisque ut ipsum id vulputate. Nulla laoreet, ligula vel congue ultricies, nibh ipsum egestas nunc, id porta nibh nunc non felis. Vestibulum nibh urna, lobortis ut euismod sed, dignissim non neque
-                                    </p>
-                                    <a href="#">
-                                        <i class="fa fa-plus-square"></i>Read more
-                                    </a>
+                @foreach (var adv in Model.Advisor.Take(3))
+                {
+                    <div class="col-lg-4 col-md-8">
+                        <div class="iconbox iconbox-style-1">
+                            <div class="iconbox-container">
+                                <div class="iconbox-image">
+                                    <img src="~/Public/images/@adv.Image" alt="@adv.Title">
+                                </div>
+                                <div class="iconbox-content">
+                                    <h4 class="iconbox-content-heading">
+                                        <i class="fa fa-@adv.Icon"></i>
+                                        @adv.Title
+                                    </h4>
+                                    <div class="iconbox-content-body">
+                                        <p>@adv.Text</p>
+                                        <a href="#">
+                                            <i class="fa fa-plus-square"></i>Read more
+                                        </a>
+                                    </div>
                                 </div>
                             </div>
                         </div>
                     </div>
-                </div>
-                <div class="col-lg-4 col-md-8">
-                    <div class="iconbox iconbox-style-1">
-                        <div class="iconbox-container">
-                            <div class="iconbox-image">
-                                <img src="~/Public/images/iconbox_02.jpg" alt="Image 1">
-                            </div>
-                            <div class="iconbox-content">
-                                <h4 class="iconbox-content-heading">
-                                    <i class="fa fa-cogs"></i>
-                                    Business Performance
-                                </h4>
-                                <div class="iconbox-content-body">
-                                    <p>
-                                        Mauris scelerisque ut ipsum id vulputate. Nulla laoreet, ligula vel congue ultricies, nibh ipsum egestas nunc, id porta nibh nunc non felis. Vestibulum nibh urna, lobortis ut euismod sed, dignissim non neque
-                                    </p>
-                                    <a href="#">
-                                        <i class="fa fa-plus-square"></i>Read more
-                                    </a>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-lg-4 col-md-8">
-                    <div class="iconbox iconbox-style-1">
-                        <div class="iconbox-container">
-                            <div class="iconbox-image">
-                                <img src="~/Public/images/iconbox_03.jpg" alt="Image 1">
-                            </div>
-                            <div class="iconbox-content">
-                                <h4 class="iconbox-content-heading">
-                                    <i class="fa fa-line-chart"></i>
-                                    Growth Hacking and Success
-                                </h4>
-                                <div class="iconbox-content-body">
-                                    <p>
-                                        Mauris scelerisque ut ipsum id vulputate. Nulla laoreet, ligula vel congue ultricies, nibh ipsum egestas nunc, id porta nibh nunc non felis. Vestibulum nibh urna, lobortis ut euismod sed, dignissim non neque
-                                    </p>
-                                    <a href="#">
-                                        <i class="fa fa-plus-square"></i>Read more
-                                    </a>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
+                }
             </div>
         </div>
     </div>
@@ -147,108 +93,27 @@
                 <div class="title-border m-b-67"></div>
             </div>
             <div class="row">
-                <div class="col-md-4 col-sm-6">
-                    <div class="iconbox iconbox-style-2">
-                        <div class="iconbox-container">
-                            <div class="iconbox-image">
-                                <a href="#">
-                                    <i class="fa fa-desktop"></i>
-                                </a>
-                            </div>
-                            <div class="iconbox-content">
-                                <a href="#" class="iconbox-content-heading">Responsive Design</a>
-                                <div class="icon-content-body">
-                                    <p>Vestibulum non diam quis nisl dignissim posuere a vulputate urna nunc velit</p>
+                @foreach (var works in Model.OurWork.Take(6))
+                {
+                    <div class="col-md-4 col-sm-6">
+                        <div class="iconbox iconbox-style-2">
+                            <div class="iconbox-container">
+                                <div class="iconbox-image">
+                                    <a href="#">
+                                        <i class="fa fa-@works.Icon"></i>
+                                    </a>
+                                </div>
+                                <div class="iconbox-content">
+                                    <a href="#" class="iconbox-content-heading">@works.Title</a>
+                                    <div class="icon-content-body">
+                                        <p>@works.Text</p>
+                                    </div>
                                 </div>
                             </div>
                         </div>
                     </div>
-                </div>
-                <div class="col-md-4 col-sm-6">
-                    <div class="iconbox iconbox-style-2">
-                        <div class="iconbox-container">
-                            <div class="iconbox-image">
-                                <a href="#">
-                                    <i class="fa fa-diamond"></i>
-                                </a>
-                            </div>
-                            <div class="iconbox-content">
-                                <a href="#" class="iconbox-content-heading">Very Easy Customizie</a>
-                                <div class="icon-content-body">
-                                    <p>Etiam mollis dui diam, eget accumsan neque consectetur quis</p>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-md-4 col-sm-6">
-                    <div class="iconbox iconbox-style-2">
-                        <div class="iconbox-container">
-                            <div class="iconbox-image">
-                                <a href="#">
-                                    <i class="fa fa-bullhorn"></i>
-                                </a>
-                            </div>
-                            <div class="iconbox-content">
-                                <a href="#" class="iconbox-content-heading">Free Font Icons</a>
-                                <div class="icon-content-body">
-                                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam convallis</p>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-md-4 col-sm-6">
-                    <div class="iconbox iconbox-style-2">
-                        <div class="iconbox-container">
-                            <div class="iconbox-image">
-                                <a href="#">
-                                    <i class="fa fa-tablet"></i>
-                                </a>
-                            </div>
-                            <div class="iconbox-content">
-                                <a href="#" class="iconbox-content-heading">Moblie Ready</a>
-                                <div class="icon-content-body">
-                                    <p>Donec at consequat tortor. Etiam ut ipsum sit amet diam pulvinar efficitur quis vitae</p>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-md-4 col-sm-6">
-                    <div class="iconbox iconbox-style-2">
-                        <div class="iconbox-container">
-                            <div class="iconbox-image">
-                                <a href="#">
-                                    <i class="fa fa-pencil"></i>
-                                </a>
-                            </div>
-                            <div class="iconbox-content">
-                                <a href="#" class="iconbox-content-heading">Modern Style</a>
-                                <div class="icon-content-body">
-                                    <p>Suspendisse eu congue mauris. Class aptent taciti sociosqu ad litora torquent</p>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-md-4 col-sm-6">
-                    <div class="iconbox iconbox-style-2">
-                        <div class="iconbox-container">
-                            <div class="iconbox-image">
-                                <a href="#">
-                                    <i class="fa fa-comments"></i>
-                                </a>
-                            </div>
-                            <div class="iconbox-content">
-                                <a href="#" class="iconbox-content-heading">Awesome Support</a>
-                                <div class="icon-content-body">
-                                    <p>Curabitur laoreet auctor sem, sodales fermentum purus rutrum in</p>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
+                }
+
             </div>
         </div>
     </div>
@@ -263,70 +128,25 @@
                 <div class="title-border m-b-67"></div>
             </div>
             <div class="owl-carousel js-owl-nav owl-nav-1" data-items="4" data-loop="true" data-responsive='{"0":{"items":"1"},"576":{"items":"2"},"768":{"items":"3"},"992":{"items":"4"}}'>
-                <div class="project">
-                    <div class="project-container">
-                        <div class="project-image">
-                            <img src="~/Public/images/project_01.jpg" alt="Project 1">
-                        </div>
-                        <div class="project-content">
-                            <div class="project-content-body">
-                                <a href="#" class="project-title">Business Growth Solutions</a>
-                                <div class="project-label">
-                                    <a href="#">Finance</a>
-                                    <a href="#">Marketing</a>
+                @foreach (var pro in Model.Project)
+                {
+                    <div class="project">
+                        <div class="project-container">
+                            <div class="project-image">
+                                <img src="~/Public/images/@pro.Image" alt="@pro.Title">
+                            </div>
+                            <div class="project-content">
+                                <div class="project-content-body">
+                                    <a href="#" class="project-title">@pro.Title</a>
+                                    <div class="project-label">
+                                        <a href="#">@pro.Text1</a>
+                                        <a href="#">@pro.Text2</a>
+                                    </div>
                                 </div>
                             </div>
                         </div>
                     </div>
-                </div>
-                <div class="project">
-                    <div class="project-container">
-                        <div class="project-image">
-                            <img src="~/Public/images/project_02.jpg" alt="Project 1">
-                        </div>
-                        <div class="project-content">
-                            <div class="project-content-body">
-                                <a href="#" class="project-title">Business Growth Solutions</a>
-                                <div class="project-label">
-                                    <a href="#">Finance</a>
-                                    <a href="#">Marketing</a>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="project">
-                    <div class="project-container">
-                        <div class="project-image">
-                            <img src="~/Public/images/project_03.jpg" alt="Project 1">
-                        </div>
-                        <div class="project-content">
-                            <div class="project-content-body">
-                                <a href="#" class="project-title">Business Growth Solutions</a>
-                                <div class="project-label">
-                                    <a href="#">Finance</a>
-                                    <a href="#">Marketing</a>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="project">
-                    <div class="project-container">
-                        <div class="project-image">
-                            <img src="~/Public/images/project_04.jpg" alt="Project 1">
-                        </div>
-                        <div class="project-content">
-                            <div class="project-content-body">
-                                <a href="#" class="project-title">Business Growth Solutions</a>
-                                <div class="project-label">
-                                    <a href="#">Finance</a>
-                                    <a href="#">Marketing</a>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
+                }
             </div>
         </div>
     </div>
@@ -357,42 +177,21 @@
                     </div>
                 </div>
                 <div class="col-lg-6 p-r-5">
-                    <div class="iconbox iconbox-style-3">
-                        <div class="iconbox-container">
-                            <div class="iconbox-content">
-                                <a href="#" class="iconbox-content-heading">
-                                    <i class="fa fa-cogs"></i>Awesome Design
-                                </a>
-                                <div class="iconbox-content-body">
-                                    <p>Morbi vehicula a nibh in commodo. Aliquam quis dolor eget lectus pulvinar malesuada. Suspendisse eu rhoncus ligula.</p>
+                    @foreach (var choose in Model.Choose)
+                    {
+                        <div class="iconbox iconbox-style-3">
+                            <div class="iconbox-container">
+                                <div class="iconbox-content">
+                                    <a href="#" class="iconbox-content-heading">
+                                        <i class="fa fa-@choose.Icon"></i>@choose.Title
+                                    </a>
+                                    <div class="iconbox-content-body">
+                                        <p>@choose.Text</p>
+                                    </div>
                                 </div>
                             </div>
                         </div>
-                    </div>
-                    <div class="iconbox iconbox-style-3">
-                        <div class="iconbox-container">
-                            <div class="iconbox-content">
-                                <a href="#" class="iconbox-content-heading">
-                                    <i class="fa fa-diamond"></i>Flexible Layouts
-                                </a>
-                                <div class="iconbox-content-body">
-                                    <p>Nam orci metus, varius at nisl at, tempor facilisis magna. Ut maximus felis et tincidunt lacinia. Nulla malesuada ipsum at magna condimentum pharetra.</p>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="iconbox iconbox-style-3">
-                        <div class="iconbox-container">
-                            <div class="iconbox-content">
-                                <a href="#" class="iconbox-content-heading">
-                                    <i class="fa fa-briefcase"></i>Easy to Use
-                                </a>
-                                <div class="iconbox-content-body">
-                                    <p>Fusce viverra risus diam, in luctus nulla porta vel. Etiam nunc lorem, dapibus id augue vitae, lacinia pharetra eros. Fusce ac egestas purus, non porta est.</p>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
+                    }
                 </div>
             </div>
         </div>
@@ -448,90 +247,37 @@
                         </h3>
                         <div class="title-border m-b-10"></div>
                         <div class="owl-carousel" data-items="1" data-loop="true">
-                            <div class="blog">
-                                <div class="blog-container">
-                                    <div class="blog-image">
-                                        <div class="blog-image-container">
-                                            <img src="~/Public/images/blog_01.jpg" alt="Blog">
-                                            <span class="blog-date">
-                                                March 25, 2018
-                                            </span>
-                                        </div>
-                                    </div>
-                                    <div class="blog-content">
-                                        <a href="#" class="blog-content-title">10 Tips for a Business Strong Start</a>
-                                        <p class="blog-content-text">Donec sit amet neque lectus. Ut vitae turpis justo. Nullam a sodales est, at viverra sem. Mauris vitae pellentesque nisi, sit amet viverra orci.</p>
-                                        <div class="blog-button">
-                                            <div class="blog-tags">
-                                                <i class="fa fa-tags"></i>
-                                                <a href="#">Development</a>,
-                                                <a href="#">Maketing</a>
-                                            </div>
-                                            <div class="blog-readmore">
-                                                <a href="#">
-                                                    <i class="fa fa-plus-square"></i>Read more
-                                                </a>
+                            @foreach (var post in Model.Post)
+                            {
+                                <div class="blog">
+                                    <div class="blog-container">
+                                        <div class="blog-image">
+                                            <div class="blog-image-container">
+                                                <img src="~/Public/images/@post.Image" alt="Blog">
+                                                <span class="blog-date">
+                                                    @post.DateTime
+                                                </span>
                                             </div>
                                         </div>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="blog">
-                                <div class="blog-container">
-                                    <div class="blog-image">
-                                        <div class="blog-image-container">
-                                            <img src="~/Public/images/blog_02.jpg" alt="Blog">
-                                            <span class="blog-date">
-                                                March 25, 2018
-                                            </span>
-                                        </div>
-                                    </div>
-                                    <div class="blog-content">
-                                        <a href="#" class="blog-content-title">Help your business to success</a>
-                                        <p class="blog-content-text">Donec sit amet neque lectus. Ut vitae turpis justo. Nullam a sodales est, at viverra sem. Mauris vitae pellentesque nisi, sit amet viverra orci.</p>
-                                        <div class="blog-button">
-                                            <div class="blog-tags">
-                                                <i class="fa fa-tags"></i>
-                                                <a href="#">Development</a>,
-                                                <a href="#">Maketing</a>
-                                            </div>
-                                            <div class="blog-readmore">
-                                                <a href="#">
-                                                    <i class="fa fa-plus-square"></i>Read more
-                                                </a>
+                                        <div class="blog-content">
+                                            <a href="#" class="blog-content-title">@post.Title</a>
+                                            <p class="blog-content-text">@post.Text</p>
+                                            <div class="blog-button">
+                                                <div class="blog-tags">
+                                                    <i class="fa fa-@post.Icon"></i>
+                                                    <a href="#">@post.Link1</a>,
+                                                    <a href="#">@post.Link2</a>
+                                                </div>
+                                                <div class="blog-readmore">
+                                                    <a href="#">
+                                                        <i class="fa fa-plus-square"></i>Read more
+                                                    </a>
+                                                </div>
                                             </div>
                                         </div>
                                     </div>
                                 </div>
-                            </div>
-                            <div class="blog">
-                                <div class="blog-container">
-                                    <div class="blog-image">
-                                        <div class="blog-image-container">
-                                            <img src="~/Public/images/blog_03.jpg" alt="Blog">
-                                            <span class="blog-date">
-                                                March 25, 2018
-                                            </span>
-                                        </div>
-                                    </div>
-                                    <div class="blog-content">
-                                        <a href="#" class="blog-content-title">How to find work you love</a>
-                                        <p class="blog-content-text">Donec sit amet neque lectus. Ut vitae turpis justo. Nullam a sodales est, at viverra sem. Mauris vitae pellentesque nisi, sit amet viverra orci.</p>
-                                        <div class="blog-button">
-                                            <div class="blog-tags">
-                                                <i class="fa fa-tags"></i>
-                                                <a href="#">Development</a>,
-                                                <a href="#">Maketing</a>
-                                            </div>
-                                            <div class="blog-readmore">
-                                                <a href="#">
-                                                    <i class="fa fa-plus-square"></i>Read more
-                                                </a>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
+                            }
                         </div>
                     </div>
                 </div>
@@ -548,38 +294,25 @@
                         </h3>
                         <div class="title-border m-b-27"></div>
                         <div class="owl-carousel" data-items="1" data-loop="true">
-                            <div class="testimonial testi-style-1">
-                                <div class="testi-container">
-                                    <div class="testi-content">
-                                        <p>Nullam faucibus, magna non fringilla ullamcorper, mi libero tempus arcu, fermentum lacinia sapie n lacus eget dui. Interdum et malesuada fames ac ante ipsum primis in faucibus. Etiam tincidunt odio dolor</p>
-                                    </div>
-                                    <div class="testi-author">
-                                        <div class="testi-author-image">
-                                            <img src="~/Public/~/Public/images/user_01.png" alt="Alex">
+                            @foreach (var test in Model.Tester)
+                            {
+                                <div class="testimonial testi-style-1">
+                                    <div class="testi-container">
+                                        <div class="testi-content">
+                                            <p>@test.Text</p>
                                         </div>
-                                        <div class="testi-author-content">
-                                            <a href="#" class="testi-author-name">Michael Green</a>
-                                            <p class="testi-author-job">Product Manager</p>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="testimonial testi-style-1">
-                                <div class="testi-container">
-                                    <div class="testi-content">
-                                        <p>Nullam faucibus, magna non fringilla ullamcorper, mi libero tempus arcu, fermentum lacinia sapie n lacus eget dui. Interdum et malesuada fames ac ante ipsum primis in faucibus. Etiam tincidunt odio dolor</p>
-                                    </div>
-                                    <div class="testi-author">
-                                        <div class="testi-author-image">
-                                            <img src="~/Public/images/user_02.png" alt="Alex">
-                                        </div>
-                                        <div class="testi-author-content">
-                                            <a href="#" class="testi-author-name">John Doe</a>
-                                            <p class="testi-author-job">Product Manager</p>
+                                        <div class="testi-author">
+                                            <div class="testi-author-image">
+                                                <img src="~/Public/images/@test.Image" alt="Alex">
+                                            </div>
+                                            <div class="testi-author-content">
+                                                <a href="#" class="testi-author-name">@test.Title1</a>
+                                                <p class="testi-author-job">@test.Title2</p>
+                                            </div>
                                         </div>
                                     </div>
                                 </div>
-                            </div>
+                            }
                         </div>
                     </div>
                 </div>
@@ -593,24 +326,12 @@
     <div class="section-wrapper bg-gray-1 py-50">
         <div class="container">
             <div class="owl-carousel" data-responsive='{"0":{"items":"1"},"576":{"items":"2"},"768":{"items":"3"},"992":{"items":"4"},"1200":{"items":"6"}}'>
-                <div class="partner">
-                    <img src="~/Public/images/partner_01.png" alt="Partner 01">
-                </div>
-                <div class="partner">
-                    <img src="~/Public/images/partner_02.png" alt="Partner 02">
-                </div>
-                <div class="partner">
-                    <img src="~/Public/images/partner_03.png" alt="Partner 03">
-                </div>
-                <div class="partner">
-                    <img src="~/Public/images/partner_04.png" alt="Partner 04">
-                </div>
-                <div class="partner">
-                    <img src="~/Public/images/partner_05.png" alt="Partner 05">
-                </div>
-                <div class="partner">
-                    <img src="~/Public/images/partner_06.png" alt="Partner 06">
-                </div>
+                @foreach (var partner in Model.Partner)
+                {
+                    <div class="partner">
+                        <img src="~/Public/images/@partner.Image" alt="Partner 01">
+                    </div>
+                }
             </div>
         </div>
     </div>
