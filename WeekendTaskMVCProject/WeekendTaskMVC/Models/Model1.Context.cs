@@ -33,5 +33,8 @@ namespace WeekendTaskMVC.Models
         public virtual DbSet<Post> Posts { get; set; }
         public virtual DbSet<Tester> Testers { get; set; }
         public virtual DbSet<Partner> Partners { get; set; }
+        public virtual DbSet<Reason> Reasons { get; set; }
+        public virtual DbSet<Team> Teams { get; set; }
+        public virtual DbSet<Testimonial> Testimonials { get; set; }
     }
 }

@@ -13,6 +13,9 @@
         <EntityTypeShape EntityType="BemaxModel.Post" Width="1.5" PointX="5.375" PointY="3.75" />
         <EntityTypeShape EntityType="BemaxModel.Tester" Width="1.5" PointX="0.75" PointY="6.75" />
         <EntityTypeShape EntityType="BemaxModel.Partner" Width="1.5" PointX="7.375" PointY="0.75" />
+        <EntityTypeShape EntityType="BemaxModel.Reason" Width="1.5" PointX="7.375" PointY="3.75" />
+        <EntityTypeShape EntityType="BemaxModel.Team" Width="1.5" PointX="3.375" PointY="7.75" />
+        <EntityTypeShape EntityType="BemaxModel.Testimonial" Width="1.5" PointX="5.375" PointY="7.75" />
       </Diagram>
     </edmx:Diagrams>
   </edmx:Designer>

@@ -18,6 +18,9 @@ namespace WeekendTaskMVC.Controllers
         protected Post Post;
         protected Tester Tester;
         protected Partner Partner;
+        protected Team Team;
+        protected Reason Reason;
+        protected Testimonial Testimonial;
         public BaseController()
         {
             db = new BemaxEntities();
@@ -29,6 +32,9 @@ namespace WeekendTaskMVC.Controllers
             Post = db.Posts.FirstOrDefault();
             Tester = db.Testers.FirstOrDefault();
             Partner = db.Partners.FirstOrDefault();
+            Reason = db.Reasons.FirstOrDefault();
+            Team = db.Teams.FirstOrDefault();
+            Testimonial = db.Testimonials.FirstOrDefault();
             
         }
 

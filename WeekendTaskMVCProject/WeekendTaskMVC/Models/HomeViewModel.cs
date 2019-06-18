@@ -15,6 +15,9 @@ namespace WeekendTaskMVC.Models
         public List<Post> Post { get; set; }
         public List<Tester> Tester { get; set; }
         public List<Partner> Partner { get; set; }
+        public List<Reason> Reason { get; set; }
+        public List<Team> Team { get; set; }
+        public List<Testimonial> Testimonial { get; set; }
 
     }
 }

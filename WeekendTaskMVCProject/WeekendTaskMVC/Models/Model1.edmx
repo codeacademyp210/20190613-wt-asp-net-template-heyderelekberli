@@ -63,6 +63,14 @@
           <Property Name="Text1" Type="nvarchar" MaxLength="150" />
           <Property Name="Text2" Type="nvarchar" MaxLength="150" />
         </EntityType>
+        <EntityType Name="Reasons">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="Title" Type="nvarchar" MaxLength="150" />
+          <Property Name="Text" Type="text" />
+        </EntityType>
         <EntityType Name="Slider">
           <Key>
             <PropertyRef Name="ID" />
@@ -71,6 +79,18 @@
           <Property Name="Link" Type="nvarchar" MaxLength="250" Nullable="false" />
           <Property Name="FirstTitle" Type="nvarchar" MaxLength="250" />
           <Property Name="SecondTitle" Type="nvarchar" MaxLength="250" />
+        </EntityType>
+        <EntityType Name="Teams">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="Images" Type="nvarchar" MaxLength="150" />
+          <Property Name="Name" Type="nvarchar" MaxLength="50" />
+          <Property Name="Position" Type="nvarchar" MaxLength="150" />
+          <Property Name="Icon1" Type="nvarchar" MaxLength="50" />
+          <Property Name="Icon2" Type="nvarchar" MaxLength="50" />
+          <Property Name="Icon3" Type="nvarchar" MaxLength="50" />
         </EntityType>
         <EntityType Name="Testers">
           <Key>
@@ -82,6 +102,16 @@
           <Property Name="Title1" Type="nvarchar" MaxLength="150" />
           <Property Name="Title2" Type="nvarchar" MaxLength="150" />
         </EntityType>
+        <EntityType Name="Testimonials">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="Text" Type="text" />
+          <Property Name="Name" Type="nvarchar" MaxLength="50" />
+          <Property Name="Position" Type="nvarchar" MaxLength="50" />
+          <Property Name="Images" Type="nvarchar" MaxLength="150" />
+        </EntityType>
         <EntityContainer Name="BemaxModelStoreContainer">
           <EntitySet Name="Advisors" EntityType="Self.Advisors" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="Chooses" EntityType="Self.Chooses" Schema="dbo" store:Type="Tables" />
@@ -89,8 +119,11 @@
           <EntitySet Name="Partners" EntityType="Self.Partners" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="Posts" EntityType="Self.Posts" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="Projects" EntityType="Self.Projects" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="Reasons" EntityType="Self.Reasons" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="Slider" EntityType="Self.Slider" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="Teams" EntityType="Self.Teams" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="Testers" EntityType="Self.Testers" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="Testimonials" EntityType="Self.Testimonials" Schema="dbo" store:Type="Tables" />
         </EntityContainer>
       </Schema></edmx:StorageModels>
     <!-- CSDL content -->
@@ -114,6 +147,9 @@
           <EntitySet Name="Posts" EntityType="BemaxModel.Post" />
           <EntitySet Name="Testers" EntityType="BemaxModel.Tester" />
           <EntitySet Name="Partners" EntityType="BemaxModel.Partner" />
+          <EntitySet Name="Reasons" EntityType="BemaxModel.Reason" />
+          <EntitySet Name="Teams" EntityType="BemaxModel.Team" />
+          <EntitySet Name="Testimonials" EntityType="BemaxModel.Testimonial" />
         </EntityContainer>
         <EntityType Name="Advisor">
           <Key>
@@ -182,6 +218,36 @@
           </Key>
           <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
           <Property Name="Image" Type="String" MaxLength="10" FixedLength="true" Unicode="true" />
+        </EntityType>
+        <EntityType Name="Reason">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="Title" Type="String" MaxLength="150" FixedLength="false" Unicode="true" />
+          <Property Name="Text" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+        </EntityType>
+        <EntityType Name="Team">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="Images" Type="String" MaxLength="150" FixedLength="false" Unicode="true" />
+          <Property Name="Name" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="Position" Type="String" MaxLength="150" FixedLength="false" Unicode="true" />
+          <Property Name="Icon1" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="Icon2" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="Icon3" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+        </EntityType>
+        <EntityType Name="Testimonial">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="Text" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+          <Property Name="Name" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="Position" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="Images" Type="String" MaxLength="150" FixedLength="false" Unicode="true" />
         </EntityType>
       </Schema>
     </edmx:ConceptualModels>
@@ -270,6 +336,39 @@
             <EntityTypeMapping TypeName="BemaxModel.Partner">
               <MappingFragment StoreEntitySet="Partners">
                 <ScalarProperty Name="Image" ColumnName="Image" />
+                <ScalarProperty Name="ID" ColumnName="ID" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Reasons">
+            <EntityTypeMapping TypeName="BemaxModel.Reason">
+              <MappingFragment StoreEntitySet="Reasons">
+                <ScalarProperty Name="Text" ColumnName="Text" />
+                <ScalarProperty Name="Title" ColumnName="Title" />
+                <ScalarProperty Name="ID" ColumnName="ID" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Teams">
+            <EntityTypeMapping TypeName="BemaxModel.Team">
+              <MappingFragment StoreEntitySet="Teams">
+                <ScalarProperty Name="Icon3" ColumnName="Icon3" />
+                <ScalarProperty Name="Icon2" ColumnName="Icon2" />
+                <ScalarProperty Name="Icon1" ColumnName="Icon1" />
+                <ScalarProperty Name="Position" ColumnName="Position" />
+                <ScalarProperty Name="Name" ColumnName="Name" />
+                <ScalarProperty Name="Images" ColumnName="Images" />
+                <ScalarProperty Name="ID" ColumnName="ID" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Testimonials">
+            <EntityTypeMapping TypeName="BemaxModel.Testimonial">
+              <MappingFragment StoreEntitySet="Testimonials">
+                <ScalarProperty Name="Images" ColumnName="Images" />
+                <ScalarProperty Name="Position" ColumnName="Position" />
+                <ScalarProperty Name="Name" ColumnName="Name" />
+                <ScalarProperty Name="Text" ColumnName="Text" />
                 <ScalarProperty Name="ID" ColumnName="ID" />
               </MappingFragment>
             </EntityTypeMapping>
